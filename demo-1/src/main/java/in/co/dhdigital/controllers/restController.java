@@ -1,6 +1,6 @@
 package in.co.dhdigital.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.GetMapping; 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@ public class restController {
 	@GetMapping("/RetrieveOnlineStatement")
 	public RetriveOnlineStatementResponce retriveOnlineStatement(@RequestBody RetriveOnlineStatementRequest req )
 	{
-		RetriveOnlineStatementResponce res = null;
+		RetriveOnlineStatementResponce res = new RetriveOnlineStatementResponce();
 		
 		if (req.getAccountNumber().isEmpty()||req.getExemptCharge().isEmpty()||req.getFromDate().isEmpty()||req.getRestartAmount().isEmpty()||req.getRestartRecNo().isEmpty()||req.getToDate().isEmpty())
 		{
